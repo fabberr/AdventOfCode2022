@@ -56,7 +56,6 @@ int part2(const char* filename) {
  * https://adventofcode.com/2022/day/1
  * 
  * Usage: ./day01 [<part=1> <input-file='./input.txt'>]
- *        make run [args="<part> <input-file>"]
 */
 int main(const int argc, const char** argv) {
     using namespace std::string_literals;
