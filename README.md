@@ -11,7 +11,7 @@ Start by installing the Homebrew package manager if you don't have it already:
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-You can then install the dependencies with the `brew` command:
+You can then install all dependencies with the `brew` command:
 
 `brew update && brew install gcc@12 make fmt`
 
