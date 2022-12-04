@@ -8,9 +8,11 @@ You'll need `make`, [`{fmt}`](https://github.com/fmtlib/fmt) and a C++20-capable
 You can install the latest versions of all dependencies using [Homebrew](https://brew.sh).
 
 Start by installing the Homebrew package manager if you don't have it already:
+
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 You can then install the dependencies with the `brew` command:
+
 `brew update && brew install gcc@12 make fmt`
 
 ## Building
