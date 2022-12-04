@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/linuxbrew/.linuxbrew/include/"
+            ],
+            "defines": [],
+            "compilerPath": "/home/linuxbrew/.linuxbrew/bin/g++-12",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}
