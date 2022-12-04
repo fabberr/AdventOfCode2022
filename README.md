@@ -16,6 +16,6 @@ You can then install all dependencies with the `brew` command:
 `brew update && brew install gcc@12 make fmt`
 
 ## Building
-To build each solution, navigate to their respective directories (i.e. `cd src/day01`) and simply run `make`.
+To build each solution, navigate to their respective directories (e.g. `cd src/day01`) and simply run `make`.
 
 A `make run` target is also provided for running the built executables right away. Forwarding arguments to the programs through this target can be done by setting an environment variable like such: `make run args='<args-for-solution-executable>'`
