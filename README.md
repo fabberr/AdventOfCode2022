@@ -29,7 +29,7 @@ Provided in the `.vscode/` directory are the necessary configuration files for b
 
 For debugging with VSCode:
 - Open the solution's source code in the editor.
-- ***Build it with `Ctrl + Shift + B`*** (this will build the current file with <ins>no optimizations and debug symbols present</ins>).
+- ***Build it with `Ctrl + Shift + B`*** (this will build the current file with <ins>debug symbols present and compiler optimizations turned off</ins>).
 - Add a breakpoint and launch the debugger with `F5`.
 
   <sup>Note: If you'd like to build and debug the solutions independently, check the [tasks.json](https://github.com/fabberr/AdventOfCode2022/blob/master/.vscode/tasks.json#L7) file and make sure you pass the same args to the compiler when building.</sup>
