@@ -28,7 +28,8 @@ Once the correct solution for part one of a puzzle is found, create a file named
 Provided in the `.vscode/` directory are the necessary configuration files for building and debugging a solution using Visual Studio Code's integrated debugging tools.
 
 For debugging with VSCode:
-- Open the solution's source code in the editor.
+- `cd` into your local repo and open it in VSCode with `code .`.
+- Open the solution's `.cpp` source file in the editor.
 - ***Build it with `Ctrl + Shift + B`*** (this will build the current file with <ins>debug symbols present and compiler optimizations turned off</ins>).
 - Add a breakpoint and launch the debugger with `F5`.
 
