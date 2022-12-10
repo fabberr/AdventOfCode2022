@@ -25,6 +25,7 @@ void part2(std::ifstream& input) {
 int main(const int argc, const char** argv) {
 
     const auto filename = argc <= 1 ? "./input.txt" : argv[1];
+    if (fs::is_empty(filename)) { return -1; }
     std::ifstream input{filename};
 
     const auto solve = (not fs::exists("./pt1.answer")) ? &part1 : &part2;
