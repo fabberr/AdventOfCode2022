@@ -17,3 +17,5 @@ run: $(BUILD_DIR)/$(BIN)
 
 clean:
 	rm $(BUILD_DIR)/$(BIN)
+
+rebuild: clean all

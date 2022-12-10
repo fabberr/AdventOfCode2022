@@ -6,6 +6,7 @@ namespace fs = std::filesystem;
 #include <array>
 #include <utility>
 #include <set>
+#include <vector>
 #include <algorithm>
 
 #include "fmt/format.h"
@@ -96,7 +97,7 @@ std::set<item_t> get_unique_items(const bag_t& compartment) {
 }
 
 /**
- * Splits a given item bag into two sets of unique items contained in each bag.
+ * Splits a given item bag into two sets of unique items contained in each of its compartments.
 */
 std::pair<std::set<item_t>, std::set<item_t>> split_items(const bag_t& bag) {
     return std::make_pair(
@@ -128,7 +129,26 @@ void part1(std::ifstream& input) {
 
 /** Solution for part two of the puzzle. */
 void part2(std::ifstream& input) {
+    std::vector<bag_t> bags{};
+    bags.reserve(300);
+    for (bag_t bag; std::getline(input, bag); ) {
+        bags.emplace_back(bag);
+    }
     input.close();
+    if ((bags.size() % 3) != 0) { std::exit(EXIT_FAILURE); }
+
+    unsigned int sum_of_badge_priorities = 0;
+    while (not bags.empty()) {
+        const auto first = get_unique_items(bags[0]), 
+                   second = get_unique_items(bags[1]), 
+                   third = get_unique_items(bags[2]);
+        const auto badge = *intersection_of(intersection_of(first, second), third).begin();
+
+        sum_of_badge_priorities += priority_of(badge);
+
+        bags.erase(bags.begin(), bags.begin() + 3);
+    }
+    fmt::print("{}\n", sum_of_badge_priorities);
 }
 
 /**
@@ -139,7 +159,7 @@ void part2(std::ifstream& input) {
 int main(const int argc, const char** argv) {
 
     const auto filename = (argc > 1 and fs::is_regular_file(argv[1])) ? argv[1] : "./input.txt";
-    if (fs::is_empty(filename)) { return -1; }
+    if (fs::is_empty(filename)) { return EXIT_FAILURE; }
     std::ifstream input{filename};
 
     const auto solve = (not fs::exists("./pt1.answer")) ? &part1 : &part2;
