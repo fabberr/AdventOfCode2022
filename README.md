@@ -25,7 +25,9 @@ A `make run` target is also provided for running the solutions right away. Forwa
 Once the correct solution for part one of a puzzle is found, create a file named `pt1.answer` in the solution's source directory (i.e. `make run > pt1.answer`), any subsequent runs of this solution will execute code to solve the puzzle for part two instead. Deleting the file reverts this behavior.
 
 ### Debugging with Visul Studio Code:
-Provided in the `.vscode/` directory are the necessary configuration files for building and debugging a solution using Visual Studio Code's integrated debugging tools.
+Provided in the [`.vscode/`](https://github.com/fabberr/AdventOfCode2022/tree/master/.vscode) directory are the necessary configuration files for building and debugging a solution using Visual Studio Code's integrated debugging tools.
+
+Before following these steps, make sure you have a working version of `gdb` installed on your system. If you don't, you can also use Homebrew to install it: `brew install gdb`.
 
 For debugging with VSCode:
 - `cd` into your local repo and open it in VSCode with `code .`.
